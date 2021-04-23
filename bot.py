@@ -31,7 +31,7 @@ async def only_pm(handler, event):
 
 @router.message(text.commands("start", prefixes="/") & (State.exact(States.state_waiting) | State.entry))
 async def response(event):
-    await event.reply("Hi !\nI\'m Archiver Bot.\n\n**HOW TO USE** :-\n1. Send Me Multiple Files.\n2. When You Finished Send /done.\n3. Send a Filename but Without Extension For Ex. Pics.\n4. I'll Archive All Your Files & Send To You.\n\n<b>NOTE</b> :-\nI'll Didn't Save Any Kind Of Your data File,\nI'll Instantly Delete All Yours Sent File After Archive Process.")
+    await event.reply("Hi ! I\'m Archiver Bot.\n\n**HOW TO USE** :\n1. Send Me Multiple Files.\n2. When You Finished Send /done.\n3. Send a Filename but Without Extension For Ex. Pics.\n4. I'll Archive All Your Files & Send To You.\n\n**NOTE** :\nI'll Didn't Save Any Kind Of Your data File,\nI'll Instantly Delete All Yours Sent File After Archive Process.")
     fsm = ctx.CageCtx.get()
     await fsm.set_state(States.state_uploading)
     await fsm.set_data({"files": []})
