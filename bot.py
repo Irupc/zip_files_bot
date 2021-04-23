@@ -72,7 +72,6 @@ async def uploading(event):
         files.append(event.message.media)
         await fsm.set_data(data)
         await event.reply(f"Received {len(files)}.")
-        await event.reply(f"Added {len(files)}.\nSend More Files else /done If You've Finished.")
     else:
         await event.reply("Please Send Files or /done To Finish.")
 
