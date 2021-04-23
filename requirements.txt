@@ -1,1 +1,3 @@
 telegram-garnet
+pyrogram
+tgcrypto
