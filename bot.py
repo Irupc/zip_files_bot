@@ -84,7 +84,6 @@ def default_conf_maker() -> RuntimeConfig:
         bot_token=default["bot_token"],
         app_id=default["app_id"],
         app_hash=default["app_hash"],
-        session_dsn=default["session_dsn"],
     )
 
 async def main():
