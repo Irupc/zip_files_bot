@@ -71,9 +71,11 @@ async def uploading(event):
         files = data['files']
         files.append(event.message.media)
         await fsm.set_data(data)
-        await event.reply(f"Received {len(files)} File.\nSend More Files else /done If You've Finished.")
-     else:
-        await event.reply("Please Send Files or /done To Finish.")
+        await event.reply(f"Saved {len(files)} so far!")
+
+    else:
+        await event.reply("Please send a file or /done to finish")
+
 
 def default_conf_maker() -> RuntimeConfig:
     config = configparser.ConfigParser()
